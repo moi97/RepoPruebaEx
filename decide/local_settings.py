@@ -13,6 +13,8 @@ MODULES = [
     'voting',
 ]
 
+BASEURL =  'http://localhost:8000'
+
 APIS = {
     'authentication': 'http://localhost:8000',
     'base': 'http://localhost:8000',
@@ -25,18 +27,18 @@ APIS = {
     'voting': 'http://localhost:8000',
 }
 
-BASEURL = 'http://localhost:8000'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'decide',
-        'PASSWORD': 'complexpassword',
-        'HOST': '127.0.0.1',
+        'PASSWORD' : 'complexpassword',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 
 # number of bits for the key, all auths should use the same number of bits
-KEYBITS = 256
+
+KEYBITS = 128
