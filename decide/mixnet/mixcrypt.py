@@ -11,7 +11,6 @@
 False
 >>> sorted(clears) == sorted(d)
 True
-
 >>> B = 256
 >>> k1 = MixCrypt(bits=B)
 >>> k1.setk(167,156,89,130) #doctest: +ELLIPSIS
@@ -199,9 +198,9 @@ class MixCrypt:
         return x
 
     def shuffle(self, msgs, pubkey=None):
-        '''
+        
         Reencrypt and shuffle
-        '''
+        
 
         msgs2 = msgs.copy()
         perm = self.gen_perm(len(msgs))

@@ -40,8 +40,7 @@ class VotingTestCase(BaseTestCase):
         v = Voting(name='test voting', question=q)
         v.save()
 
-        a, _ = Auth.objects.get_or_create(url=settings.BASEURL,
-                                          defaults={'me': True, 'name': 'test auth'})
+        a, _ = Auth.objects.get_or_create(url=settings.BASEURL, defaults={'me': True, 'name': 'test auth'})
         a.save()
         v.auths.add(a)
 
